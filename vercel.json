@@ -24,7 +24,9 @@
     }
   ],
   "env": {
-    "DIFY_API_KEY": "@dify_api_key",
-    "DIFY_API_URL": "@dify_api_url"
+    "DIFY_API_KEY": "$DIFY_API_KEY",
+    "DIFY_BASE_URL": "$DIFY_BASE_URL",
+    "DIFY_APP_ID": "$DIFY_APP_ID",
+    "PORT": "$PORT"
   }
 }
