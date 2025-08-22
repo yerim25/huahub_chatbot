@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .flex-row {
+        display: flex;
+        flex-direction: row;
+      }
+      .flex-col {
+        display: flex;
+        flex-direction: column;
+      }
+      .justify-start {
+        display: flex;
+        justify-content: flex-start;
+      }
+      .justify-center {
+        display: flex;
+        justify-content: center;
+      }
+      .justify-end {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .justify-between {
+        display: flex;
+        justify-content: space-between;
+      }
+      .items-start {
+        display: flex;
+        align-items: flex-start;
+      }
+      .items-end {
+        display: flex;
+        align-items: flex-end;
+      }
+      .items-center {
+        display: flex;
+        align-items: center;
+      }
+      .no-shrink {
+        flex-shrink: 0;
+      }
+
+      .music_1_0009 {
+        width: 375px;
+        height: 762px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #ffffff;
+      }
+
+      .music_1_0018 {
+        width: auto;
+        height: 636px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 60px;
+        padding-right: 16px;
+        padding-bottom: 70px;
+        padding-left: 16px;
+        gap: 10px;
+        right: 0;
+      }
+
+      .music_1_0033 {
+        width: auto;
+        height: 490px;
+        position: absolute;
+        top: 0;
+        left: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 16px;
+        flex-shrink: 0;
+        right: 16px;
+        bottom: 26px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      .music_1_0065 {
+        width: auto;
+        height: 84px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8px;
+        flex-shrink: 0;
+        right: 0;
+      }
+
+      .music_1_0124 {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 9999px;
+        background-color: #15b8a6;
+      }
+
+      .music_1_0163 {
+        width: calc(100% - 14px);
+        height: auto;
+        position: absolute;
+        top: 6px;
+        left: 7px;
+        flex-shrink: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: -1px;
+        margin-left: 0px;
+        right: 7px;
+        bottom: 6px;
+      }
+
+      .music_1_0125 {
+        width: 274px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 11px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 12px;
+        padding-right: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 0 16px 16px 16px;
+        background-color: #f3f4f6;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 0;
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 400;
+        line-height: 20px;
+        color: #000000;
+      }
+
+      .music_1_0754 {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0066 {
+        width: auto;
+        height: 64px;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 8px;
+        flex-shrink: 0;
+        right: 0;
+      }
+
+      .music_1_0127 {
+        width: 274px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 12px;
+        padding-right: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 16px 0 16px 16px;
+        background-color: #15b8a6;
+        right: 0;
+        bottom: 0;
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 400;
+        line-height: 20px;
+        color: #ffffff;
+      }
+
+      .music_1_0767 {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0067 {
+        width: auto;
+        height: 310px;
+        position: absolute;
+        top: auto;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8px;
+        flex-shrink: 0;
+        right: 0;
+        bottom: 0;
+      }
+
+      .music_1_0129 {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 9999px;
+        background-color: #15b8a6;
+      }
+
+      .music_1_0169 {
+        width: calc(100% - 14px);
+        height: auto;
+        position: absolute;
+        top: 6px;
+        left: 7px;
+        flex-shrink: 0;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: -1px;
+        margin-left: 0px;
+        right: 7px;
+        bottom: 6px;
+      }
+
+      .music_1_0130 {
+        width: 274px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 11px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 12px;
+        padding-right: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 0 16px 16px 16px;
+        background-color: #f3f4f6;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 0;
+      }
+
+      .music_1_0780 {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 400;
+        line-height: 20px;
+        color: #000000;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0172 {
+        width: auto;
+        height: 234px;
+        position: absolute;
+        top: auto;
+        left: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-bottom: 8px;
+        gap: 12px;
+        flex-shrink: 0;
+        overflow: hidden;
+        right: 12px;
+        bottom: 12px;
+      }
+
+      .music_1_0832 {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-radius: 16px;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #f3f4f6;
+        background: linear-gradient(0, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), linear-gradient(0, #ffffff, #ffffff);
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        position: relative;
+      }
+
+      .music_1_0842 {
+        width: 198px;
+        height: 120px;
+        flex-shrink: 0;
+        border-radius: 16px 16px 0 0;
+        background: url(https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/62040241965/56f2/12e4/20e9/d798e006063a2e60ab180680140772d5.png) center / cover no-repeat;
+      }
+
+      .music_1_0843 {
+        width: 198px;
+        height: 104px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 12px;
+        padding-right: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+
+      .music_1_0844 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 500;
+        line-height: 20px;
+        color: #000000;
+        white-space: pre;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0849 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        font-size: 12px;
+        font-family: Roboto;
+        font-weight: 400;
+        line-height: 16px;
+        color: #6b7280;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0854 {
+        width: auto;
+        height: 16px;
+        position: absolute;
+        top: auto;
+        left: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-shrink: 0;
+        right: 12px;
+        bottom: 12px;
+        font-size: 12px;
+        font-family: Roboto;
+        font-weight: 400;
+        line-height: 16px;
+        color: #9ca3af;
+        white-space: pre;
+      }
+
+      .music_1_0855 {
+        width: 9px;
+        height: auto;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        flex-shrink: 0;
+        margin-top: 0px;
+        margin-right: 0;
+        margin-bottom: -1px;
+        margin-left: 0;
+        bottom: 2px;
+      }
+
+      .music_1_0859 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0909 {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        border-radius: 16px;
+        border-width: 1px 1px 1px 1px;
+        border-style: solid;
+        border-color: #f3f4f6;
+        background: linear-gradient(0, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), linear-gradient(0, #ffffff, #ffffff);
+        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+        position: relative;
+      }
+
+      .music_1_0919 {
+        width: 198px;
+        height: 120px;
+        flex-shrink: 0;
+        border-radius: 16px 16px 0 0;
+        background: url(https://seal-img.nos-jd.163yun.com/obj/w5rCgMKVw6DCmGzCmsK-/62040237567/2d0a/b394/1d00/2592bad784204a135a1aaa73ae35c256.png) center / cover no-repeat;
+      }
+
+      .music_1_0920 {
+        width: 198px;
+        height: 104px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 12px;
+        padding-right: 12px;
+        padding-bottom: 12px;
+        padding-left: 12px;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+
+      .music_1_0921 {
+        width: 174px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 500;
+        line-height: 20px;
+        color: #000000;
+        white-space: pre;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0926 {
+        width: 174px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        font-size: 12px;
+        font-family: Roboto;
+        font-weight: 400;
+        line-height: 16px;
+        color: #6b7280;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0931 {
+        width: auto;
+        height: 16px;
+        position: absolute;
+        top: auto;
+        left: 12px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        flex-shrink: 0;
+        right: 12px;
+        bottom: 12px;
+        font-size: 12px;
+        font-family: Roboto;
+        font-weight: 400;
+        line-height: 16px;
+        color: #9ca3af;
+        white-space: pre;
+      }
+
+      .music_1_0932 {
+        width: 9px;
+        height: auto;
+        position: absolute;
+        top: 2px;
+        left: 0;
+        flex-shrink: 0;
+        margin-top: 0px;
+        margin-right: 0;
+        margin-bottom: -1px;
+        margin-left: 0;
+        bottom: 2px;
+      }
+
+      .music_1_0936 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0034 {
+        width: auto;
+        height: 65px;
+        position: absolute;
+        top: auto;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 11px;
+        padding-right: 16px;
+        padding-bottom: 12px;
+        padding-left: 16px;
+        gap: 10px;
+        flex-shrink: 0;
+        border-width: 1px 0px 0px 0px;
+        border-style: solid;
+        border-color: #f3f4f6;
+        background-color: #ffffff;
+        right: 0;
+        bottom: -106px;
+      }
+
+      .music_1_0070 {
+        width: auto;
+        height: auto;
+        position: absolute;
+        top: 12px;
+        left: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 8px;
+        flex-shrink: 0;
+        right: 16px;
+        bottom: 13px;
+      }
+
+      .music_1_0136 {
+        width: 295px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 8px;
+        padding-right: 16px;
+        padding-bottom: 8px;
+        padding-left: 16px;
+        flex-shrink: 0;
+        border-radius: 9999px;
+        background-color: #f3f4f6;
+        bottom: 0;
+        font-size: 14px;
+        font-family: Roboto;
+        font-weight: 400;
+        line-height: 20px;
+        color: #9ca3af;
+        white-space: pre;
+      }
+
+      .music_1_0947 {
+        width: 263px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        overflow: hidden;
+        border-radius: 2px;
+        text-overflow: ellipsis;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0137 {
+        width: 40px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: 9999px;
+        background-color: #15b8a6;
+        right: 0;
+        bottom: 0;
+      }
+
+      .music_1_060 {
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-shrink: 0;
+        margin-top: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        right: 0;
+        bottom: 0;
+      }
+
+      .music_1_0019 {
+        width: auto;
+        height: 57px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 12px;
+        padding-right: 16px;
+        padding-bottom: 11px;
+        padding-left: 16px;
+        border-width: 0px 0px 1px 0px;
+        border-style: solid;
+        border-color: #f3f4f6;
+        background-color: #ffffff;
+        right: 0;
+        font-size: 20px;
+        font-family: Pacifico;
+        font-weight: 400;
+        line-height: 28px;
+        color: #15b8a6;
+        white-space: pre;
+      }
+
+      .music_1_0960 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        flex-shrink: 0;
+        padding-top: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+
+      .music_1_0038 {
+        width: 32px;
+        height: auto;
+        position: absolute;
+        top: 12px;
+        left: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        right: 16px;
+        bottom: 13px;
+      }
+
+      .music_1_040 {
+        width: 4px;
+        height: auto;
+        position: absolute;
+        top: 9px;
+        left: 0;
+        flex-shrink: 0;
+        margin-top: 0;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+        right: 0;
+        bottom: 9px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
